@@ -53,5 +53,10 @@ class Kernel extends HttpKernel
         // ✅ Middleware bạn tự tạo
         'checkStatus' => \App\Http\Middleware\CheckUserStatus::class,
         'isAdmin' => \App\Http\Middleware\IsAdmin::class,
+        
+    ];
+
+    protected $commands = [
+        \App\Console\Commands\ImportDatabase::class,
     ];
 }
